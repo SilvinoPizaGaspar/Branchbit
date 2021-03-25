@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BranchbitModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ProductoItalika">
+    <Key>
+      <PropertyRef Name="SKU" />
+    </Key>
+    <Property Name="SKU" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Fert" Type="varchar" MaxLength="50" />
+    <Property Name="Modelo" Type="varchar" MaxLength="50" />
+    <Property Name="Tipo" Type="varchar" MaxLength="50" />
+    <Property Name="NumeroSerie" Type="varchar" MaxLength="50" />
+    <Property Name="Fecha" Type="datetime" />
+  </EntityType>
+  <Function Name="ProductoAdd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SKU" Type="varchar" Mode="In" />
+    <Parameter Name="Fert" Type="varchar" Mode="In" />
+    <Parameter Name="Modelo" Type="varchar" Mode="In" />
+    <Parameter Name="Tipo" Type="varchar" Mode="In" />
+    <Parameter Name="NumeroSerie" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ProductoDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SKU" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ProductosGetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ProductosGetProductogetBySKU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SKU" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ProductoUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SKU" Type="varchar" Mode="In" />
+    <Parameter Name="Fert" Type="varchar" Mode="In" />
+    <Parameter Name="Modelo" Type="varchar" Mode="In" />
+    <Parameter Name="Tipo" Type="varchar" Mode="In" />
+    <Parameter Name="NumeroSerie" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="BranchbitModelStoreContainer">
+    <EntitySet Name="ProductoItalika" EntityType="Self.ProductoItalika" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

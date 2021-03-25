@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BranchbitModelStoreContainer" CdmEntityContainer="BranchbitEntities">
+    <FunctionImportMapping FunctionImportName="ProductoAdd" FunctionName="BranchbitModel.Store.ProductoAdd" />
+    <FunctionImportMapping FunctionImportName="ProductoDelete" FunctionName="BranchbitModel.Store.ProductoDelete" />
+    <FunctionImportMapping FunctionImportName="ProductoUpdate" FunctionName="BranchbitModel.Store.ProductoUpdate" />
+    <EntitySetMapping Name="ProductoItalikas">
+      <EntityTypeMapping TypeName="BranchbitModel.ProductoItalika">
+        <MappingFragment StoreEntitySet="ProductoItalika">
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="NumeroSerie" ColumnName="NumeroSerie" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Fert" ColumnName="Fert" />
+          <ScalarProperty Name="SKU" ColumnName="SKU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ProductosGetAll" FunctionName="BranchbitModel.Store.ProductosGetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BranchbitModel.ProductosGetAll_Result">
+          <ScalarProperty Name="SKU" ColumnName="SKU" />
+          <ScalarProperty Name="Fert" ColumnName="Fert" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="NumeroSerie" ColumnName="NumeroSerie" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ProductosGetProductogetBySKU" FunctionName="BranchbitModel.Store.ProductosGetProductogetBySKU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BranchbitModel.ProductosGetProductogetBySKU_Result">
+          <ScalarProperty Name="SKU" ColumnName="SKU" />
+          <ScalarProperty Name="Fert" ColumnName="Fert" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="NumeroSerie" ColumnName="NumeroSerie" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

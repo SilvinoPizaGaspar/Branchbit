@@ -1,0 +1,5 @@
+c:\users\alien 9\documents\visual studio 2013\Projects\Branchbit\ML\bin\Debug\ML.dll
+c:\users\alien 9\documents\visual studio 2013\Projects\Branchbit\ML\bin\Debug\ML.pdb
+c:\users\alien 9\documents\visual studio 2013\Projects\Branchbit\ML\obj\Debug\ML.dll
+c:\users\alien 9\documents\visual studio 2013\Projects\Branchbit\ML\obj\Debug\ML.pdb
+c:\users\alien 9\documents\visual studio 2013\Projects\Branchbit\ML\obj\Debug\ML.csprojResolveAssemblyReference.cache

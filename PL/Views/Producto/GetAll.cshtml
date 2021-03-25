@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "GetAll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Productos Italika</h2>
+<div class="container">
+    <div class="row">
+        <div style="float:right; margin-bottom:1rem;">
+            @Html.ActionLink("+", "Form", "Producto", htmlAttributes: new { @class = "btn btn-success" })
+        </div>
+
+        <table class="table table-bordered table-responsive">
+            <thead>
+                <tr>
+                    <th>Editar</th>
+                    <th>SKU</th>
+                    <th>FERT</th>
+                    <th>MODELO</th>
+                    <th>TIPO</th>
+                    <th>NUMERO DE SERIE</th>
+                    <th>FECHA</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (ML.Producto producto in Model.Productos)
+                {
+                    <tr>
+                        <td><a class="btn btn-warning glyphicon glyphicon-edit" href="@Url.Action("Form", "producto", new { SKU = producto.SKU })"></a></td>
+                        <td>@producto.SKU</td>
+                        <td>@producto.Fert</td>
+                        <td>@producto.Modelo</td>
+                        <td>@producto.Tipo</td>
+                        <td>@producto.NumeroDeSerie</td>
+                        <td>@producto.Fecha</td>
+                        <td><a class="btn btn-danger glyphicon glyphicon-trash" href="@Url.Action("Delete", "producto", new { SKU= producto.SKU})" onclick="return confirm('Estas seguro que deseas eliminar este registro?');" ;></a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
